@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+  ~ Hibernate, Relational Persistence for Idiomatic Java
+  ~
+  ~ License: GNU Lesser General Public License (LGPL), version 2.1 or later.
+  ~ See the lgpl.txt file in the root directory or <http://www.gnu.org/licenses/lgpl-2.1.html>.
+  -->
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+ 
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/careerconsultancy</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL55Dialect</property>
+        <property name="hibernate.hbm2ddl.auto">create-drop</property>
+        <property name="show_sql">true</property>
+        
+ 		<property name="hibernate.current_session_context_class">org.hibernate.context.internal.ThreadLocalSessionContext</property> 
+ 		 <mapping class="com.careerconsultancy.entities.jobseeker.JobSeekerAddress"/>
+        <mapping class="com.careerconsultancy.entities.jobseeker.JobSeekerPersonalDetails"/>
+      	<mapping class="com.careerconsultancy.entities.jobseeker.JobSeeker"/> 
+        <mapping class="com.careerconsultancy.entities.jobseeker.JobSeekerEducationalDetails"/> 
+       <mapping class="com.careerconsultancy.entities.jobseeker.JobSeekerProffesionalDetails"/>  
+       <mapping class="com.careerconsultancy.entities.employee.EmployeeDetails"/>  
+        <mapping class="com.carrerconsultancy.entities.job.JobInfo"/> 
+         <mapping class="com.carrerconsultancy.entities.logincredential.LoginCredential"/> 
+    </session-factory>
+ 
+</hibernate-configuration>
